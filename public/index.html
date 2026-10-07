@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PoC Codex App Server</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="card">
+    <p class="eyebrow">PRUEBA LOCAL</p>
+    <h1>ChatGPT + Codex App Server</h1>
+    <p class="intro">Pregunta desde esta página y recibe la respuesta usando el plan de ChatGPT autorizado.</p>
+    <section class="connection">
+      <div><span id="dot" class="dot"></span><strong id="status">Comprobando conexión…</strong></div>
+      <button id="connect" class="secondary">Conectar con ChatGPT</button>
+    </section>
+    <p id="notice" class="notice" role="status"></p>
+    <label for="question">Pregunta</label>
+    <textarea id="question" rows="3" placeholder="¿Qué es una API REST?" disabled></textarea>
+    <div class="actions"><button id="send" disabled>Enviar</button><button id="stop" class="secondary" hidden>Detener</button></div>
+    <section class="answer-wrap"><div class="answer-title">Respuesta</div><pre id="answer">La respuesta aparecerá aquí.</pre></section>
+    <section class="meta"><span>Thread: <code id="thread">No iniciado</code></span><button id="limits" class="link">Consultar uso y límites</button></section>
+    <pre id="limits-result" class="limits" hidden></pre>
+    <p class="foot">Los tokens permanecen en el backend local y no se envían al navegador.</p>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
